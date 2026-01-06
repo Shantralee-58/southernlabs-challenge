@@ -1,0 +1,99 @@
+:root {
+    --sl-orange: #FF6A00;
+    --sl-black: #000000;
+    --sl-white: #FFFFFF;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--sl-white);
+    color: var(--sl-orange);
+    text-align: center;
+}
+
+h1, h2, h3, p, label {
+    color: var(--sl-orange);
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.game-area {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 3px;
+}
+
+.cell {
+    border: 1px solid var(--sl-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.robot {
+    background: var(--sl-orange);
+    color: var(--sl-white);
+}
+
+.obstacle {
+    background: var(--sl-black);
+    color: var(--sl-white);
+}
+
+.stairs {
+    background: var(--sl-orange);
+    color: var(--sl-white);
+}
+
+.item {
+    background: var(--sl-orange);
+    color: var(--sl-white);
+}
+
+.light-green {
+    background: green;
+    color: var(--sl-white);
+}
+
+.light-red {
+    background: red;
+    color: var(--sl-white);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background: var(--sl-orange);
+    color: var(--sl-white);
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: var(--sl-black);
+    color: var(--sl-orange);
+}
+
+#blocklyDiv {
+    border: 2px solid var(--sl-black);
+    background: #f7f7f7;
+}
+

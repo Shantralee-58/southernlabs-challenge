@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SouthernLabs Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SouthernLabs Challenge 🚀</h1>
+    <p>Fill your details to start the game:</p>
+    <form id="studentForm">
+      <input type="text" id="name" placeholder="Your Name" required><br><br>
+      <input type="email" id="email" placeholder="Your Email" required><br><br>
+      <select id="course">
+        <option value="softwareDevelopment">Applied Software Development</option>
+        <option value="softwareEngineering">Software Engineering</option>
+      </select><br><br>
+      <button type="submit">Start Challenge</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("studentForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      sessionStorage.setItem("studentName", document.getElementById("name").value);
+      sessionStorage.setItem("studentEmail", document.getElementById("email").value);
+      sessionStorage.setItem("currentLevel", "1");
+      window.location.href = "game.html";
+    });
+  </script>
+</body>
+</html>
+
